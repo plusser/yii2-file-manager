@@ -9,6 +9,8 @@ class Module extends \yii\base\Module
 
     public $patternPrefix = 'file-manager';
 
+    public static $instance;
+
     public function init()
     {
         parent::init();
@@ -22,6 +24,7 @@ class Module extends \yii\base\Module
             ], FALSE);
         }
 
+        static::$instance = $this;
     }
 
 }
