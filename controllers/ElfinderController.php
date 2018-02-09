@@ -39,8 +39,8 @@ class ElfinderController extends Controller
                         [
                             'alias' => 'Документы',
                             'driver' => 'LocalFileSystem',
-                            'path' => Yii::getAlias('@webroot') . DIRECTORY_SEPARATOR . 'files',
-                            'URL' => Yii::getAlias('@web') . '/files/',
+                            'path' => Yii::getAlias('@webroot/files'),
+                            'URL' => $this->module->frontendHost . Yii::getAlias('@web/files/'),
                             'mimeDetect' => 'internal',
                             'acceptedName' => '/(^([а-яА-Яa-zA-Z0-9\_\.-]*)([a-zA-Z\_0-9\.]*))$/',
                             'accessControl' => 'access',
@@ -68,8 +68,8 @@ class ElfinderController extends Controller
                         [
                             'alias' => 'Изображения',
                             'driver' => 'LocalFileSystem',
-                            'path' => Yii::getAlias('@webroot') . DIRECTORY_SEPARATOR . 'images',
-                            'URL' => Yii::getAlias('@web') . '/images/',
+                            'path' => Yii::getAlias('@webroot/images'),
+                            'URL' => $this->module->frontendHost . Yii::getAlias('@web/images/'),
                             'mimeDetect' => 'internal',
                             'imgLib' => 'imagick',
                             'acceptedName' => '/(^([а-яА-Яa-zA-Z0-9\_\.-]*)([a-zA-Z\_0-9\.]*))$/',

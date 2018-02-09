@@ -8,6 +8,7 @@ class Module extends \yii\base\Module
 {
 
     public $patternPrefix = 'file-manager';
+    public $frontendHost = NULL;
 
     public static $instance;
 
