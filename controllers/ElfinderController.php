@@ -39,7 +39,7 @@ class ElfinderController extends Controller
                         [
                             'alias' => 'Документы',
                             'driver' => 'LocalFileSystem',
-                            'path' => Yii::getAlias('@webroot/files'),
+                            'path' => Yii::getAlias($this->module->filesPath),
                             'URL' => $this->module->frontendHost . Yii::getAlias('@web/files/'),
                             'mimeDetect' => 'internal',
                             'acceptedName' => '/(^([а-яА-Яa-zA-Z0-9\_\.-]*)([a-zA-Z\_0-9\.]*))$/',
@@ -68,7 +68,7 @@ class ElfinderController extends Controller
                         [
                             'alias' => 'Изображения',
                             'driver' => 'LocalFileSystem',
-                            'path' => Yii::getAlias('@webroot/images'),
+                            'path' => Yii::getAlias($this->module->imagesPath),
                             'URL' => $this->module->frontendHost . Yii::getAlias('@web/images/'),
                             'mimeDetect' => 'internal',
                             'imgLib' => 'imagick',
