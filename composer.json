@@ -12,6 +12,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
+        "plusser/yii2-rbac-user-manager": "*",
         "alexantr/yii2-elfinder": "^1.1"
     },
     "autoload": {
