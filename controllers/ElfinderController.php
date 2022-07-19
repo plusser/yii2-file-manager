@@ -16,7 +16,7 @@ class ElfinderController extends Controller
     {
         return [
             'access' => [
-                'class' => AccessControl::className(),
+                'class' => AccessControl::class,
                 'only' => ['index', 'connector', 'tinymce', 'input', ],
                 'rules' => [
                     [
@@ -33,7 +33,7 @@ class ElfinderController extends Controller
     {
         return [
             'connector' => [
-                'class' => ConnectorAction::className(),
+                'class' => ConnectorAction::class,
                 'options' => [
                     'roots' => [
                         [
@@ -90,11 +90,11 @@ class ElfinderController extends Controller
                 ],
             ],
             'input' => [
-                'class' => InputFileAction::className(),
+                'class' => InputFileAction::class,
                 'connectorRoute' => 'connector',
             ],
             'tinymce' => [
-                'class' => TinyMCEAction::className(),
+                'class' => TinyMCEAction::class,
                 'connectorRoute' => 'connector',
             ],
         ];
